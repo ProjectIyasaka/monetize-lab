@@ -477,6 +477,151 @@ a:hover { text-decoration: underline; }
 .tag-cloud a:hover { background: var(--teal-light); color: var(--teal-dark); text-decoration: none; }
 
 /* ============================
+   Profile Hero
+   ============================ */
+.profile-hero {
+  background: linear-gradient(135deg, var(--teal-light) 0%, #fff 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 20px;
+}
+.profile-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.profile-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 240px;
+}
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), #3a8ca3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+}
+.profile-hero-name { font-weight: 900; font-size: 15px; margin-bottom: 4px; }
+.profile-hero-bio { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.profile-hero-bio strong { color: var(--teal-dark); }
+
+.achievement-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.achievement-item {
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  box-shadow: var(--shadow);
+  min-width: 80px;
+}
+.achievement-num {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.2;
+}
+.achievement-num small { font-size: 12px; }
+.achievement-label { font-size: 11px; color: var(--muted); }
+
+/* ============================
+   Coming Soon Cards
+   ============================ */
+.post-card--soon {
+  position: relative;
+  opacity: .75;
+  cursor: default;
+  pointer-events: none;
+}
+.coming-soon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #888;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: .5px;
+}
+
+/* ============================
+   Popular List Ranks
+   ============================ */
+.popular-list { gap: 10px !important; }
+.popular-list li { display: flex; align-items: flex-start; gap: 8px; }
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.rank-1 { background: #e6a817; }
+.rank-2 { background: #9e9e9e; }
+.rank-3 { background: #a0674a; }
+.text-muted { color: var(--muted); font-size: 13px; }
+
+/* ============================
+   Newsletter
+   ============================ */
+.newsletter-section {
+  background: linear-gradient(135deg, var(--teal) 0%, #3a8ca3 100%);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  color: #fff;
+  margin-top: 8px;
+}
+.newsletter-title { font-size: 17px; font-weight: 900; margin-bottom: 8px; }
+.newsletter-desc { font-size: 13px; opacity: .9; margin-bottom: 18px; line-height: 1.7; }
+.newsletter-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
+.newsletter-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+.newsletter-btn {
+  background: #fff;
+  color: var(--teal-dark);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: opacity .2s;
+}
+.newsletter-btn:hover { opacity: .85; }
+
+/* ============================
    Responsive
    ============================ */
 @media (max-width: 768px) {
@@ -485,4 +630,7 @@ a:hover { text-decoration: underline; }
   .site-nav { display: none; }
   .card-grid { grid-template-columns: 1fr; }
   .post-grid { grid-template-columns: 1fr; }
+  .achievement-grid { gap: 10px; }
+  .newsletter-form { flex-direction: column; }
+  .profile-hero-inner { flex-direction: column; align-items: flex-start; }
 }
