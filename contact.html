@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | マネタイズ研究室</title>
+  <meta name="description" content="マネタイズ研究室へのお問い合わせページです。">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" style="text-decoration:none;">
+      <div class="site-logo">
+        <span class="name">マネタイズ研究室</span>
+        <span class="tagline">副業・ネット収入を賢く攻略する</span>
+      </div>
+    </a>
+    <nav aria-label="メインナビゲーション">
+      <ul class="site-nav">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="index.html#affiliate">アフィリエイト</a></li>
+        <li><a href="index.html#fukugyo">副業</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrapper">
+  <main>
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">お問い合わせ</h1>
+      </header>
+      <div class="article-body">
+
+        <p>マネタイズ研究室へのご意見・ご質問・記事の誤りのご指摘などは、以下のフォームよりお送りください。通常2〜3営業日以内にご返信いたします。</p>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">必須</span></label>
+              <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">必須</span></label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">件名 <span class="required">必須</span></label>
+              <input type="text" id="subject" name="subject" placeholder="お問い合わせ内容の件名" required>
+            </div>
+            <div class="form-group">
+              <label for="message">メッセージ <span class="required">必須</span></label>
+              <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容を入力してください" required></textarea>
+            </div>
+            <button type="submit" class="btn-cta" style="border:none; cursor:pointer; width:100%; font-size:15px;">
+              送信する
+            </button>
+          </form>
+          <div id="form-success" style="display:none;" class="summary-box">
+            <strong>✅ 送信が完了しました。</strong><br>
+            お問い合わせありがとうございます。2〜3営業日以内にご返信いたします。
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-widget">
+      <div class="widget-title">メニュー</div>
+      <div class="widget-body">
+        <ul class="related-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="a8-affiliate.html">A8.netアフィリ完全ガイド</a></li>
+          <li><a href="stripcash-affiliate.html">StripCashアフィリ完全ガイド</a></li>
+          <li><a href="dmm-affiliate.html">DMMアフィリエイト完全ガイド</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 マネタイズ研究室 | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">お問い合わせ</a></p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.querySelector('.contact-form').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
